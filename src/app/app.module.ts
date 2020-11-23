@@ -5,7 +5,7 @@ import { HelloComponent } from "./hello.component";
 import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from "./app.component";
 import { AccountService } from "./services/account.service";
-import { NavComponent } from './nav/nav.component';
+import { NavComponent } from "./nav/nav.component";
 
 @NgModule({
   imports: [BrowserModule, FormsModule, HttpClientModule],
