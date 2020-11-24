@@ -28,3 +28,8 @@ svg {
 .welcome:hover {
   color: rgba(79, 70, 229, 1) !important;
 }
+
+a.dropdown-item:active {
+  background-color: transparent;
+  color: white;
+}
