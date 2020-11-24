@@ -24,3 +24,7 @@ svg {
 .dropdown-menu li a:hover {
   color: rgba(79, 70, 229, 1) !important;
 }
+
+.welcome:hover {
+  color: rgba(79, 70, 229, 1) !important;
+}
