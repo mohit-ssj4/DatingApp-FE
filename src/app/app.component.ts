@@ -8,7 +8,7 @@ import { Component, OnInit, VERSION } from "@angular/core";
 })
 export class AppComponent implements OnInit {
   users: any;
-  url: string = "https://localhost:5001/api/Users";
+  url: string = "https://localhost:5001/api/users";
 
   constructor(private http: HttpClient) {}
 
