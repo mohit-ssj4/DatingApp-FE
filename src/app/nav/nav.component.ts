@@ -13,7 +13,7 @@ export class NavComponent implements OnInit {
 
   ngOnInit() {}
 
-  login() {
+  login(loginForm) {
     this.accountService.login(this.model).subscribe(
       response => {
         console.log(response);
@@ -23,6 +23,7 @@ export class NavComponent implements OnInit {
         console.log(error);
       }
     );
+    loginForm.reset();
   }
 
   logout() {

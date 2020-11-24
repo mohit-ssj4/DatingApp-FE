@@ -1,92 +1,274 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-	<div class="container-fluid">
-		<!-- Brand / Logo Starts Here -->
-		<a class="navbar-brand">MyDotNETApp</a>
-		<!-- Brand / Logo Ends Here -->
+  <div class="container-fluid">
+    <!-- Brand / Logo Starts Here -->
+    <a class="navbar-brand">MyDotNETApp</a>
+    <!-- Brand / Logo Ends Here -->
 
-		<!-- Collapsible Navbar Starts Here -->
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Collapsible Navbar Starts Here -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
-		<!-- Collapsible Navbar Ends Here -->
+    <!-- Collapsible Navbar Ends Here -->
 
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<!-- Nav Links Starts Here -->
-			<ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-				<li class="nav-item">
-					<a class="nav-link">Matches</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link">Lists</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link">Messages</a>
-				</li>
-			</ul>
-			<!-- Nav Links Ends Here -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Nav Links Starts Here -->
+      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
+              ></path>
+            </svg>
+            Matches
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+              ></path>
+            </svg>
+            Lists
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
+              ></path>
+            </svg>
+            Messages
+          </a>
+        </li>
+      </ul>
+      <!-- Nav Links Ends Here -->
 
-			<!-- Dropdown Starts Here -->
-			<div *ngIf="loggedIn" class="dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-					aria-expanded="false">
-					Welcome user
-				</a>
-				<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<li><a class="dropdown-item">Edit Profile</a></li>
-					<li>
-						<hr class="dropdown-divider">
-					</li>
-					<li><a class="dropdown-item" (click)="logout()">Logout</a></li>
-				</ul>
-			</div>
-			<!-- Dropdown Ends Here -->
+      <!-- Dropdown Starts Here -->
+      <div *ngIf="loggedIn" class="dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Welcome user
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li>
+            <a class="dropdown-item">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                ></path>
+              </svg>
+              Edit Profile
+            </a>
+          </li>
+          <li>
+            <hr class="dropdown-divider" />
+          </li>
+          <li>
+            <a class="dropdown-item" (click)="logout()">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                ></path>
+              </svg>
+              Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- Dropdown Ends Here -->
 
-			<!-- Login Button Starts Here -->
-			<button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#loginModal">
+      <!-- Login Button Starts Here -->
+      <button
+        *ngIf="!loggedIn"
+        type="button"
+        class="btn btn-outline-primary"
+        data-toggle="modal"
+        data-target="#loginModal"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+          ></path>
+        </svg>
         Log in
       </button>
-			<!-- Login Button Starts Here -->
-		</div>
-	</div>
-	<!-- Login Modal Starts Here -->
-	<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="loginModalLabel">LOG IN</h5>
-					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<form #loginForm="ngForm" class="w-100" (ngSubmit)="login()" autocomplete="off">
-						<div class="form-floating mb-4">
-							<input
+      <!-- Login Button Starts Here -->
+    </div>
+  </div>
+  <!-- Login Modal Starts Here -->
+  <div
+    class="modal fade"
+    id="loginModal"
+    tabindex="-1"
+    aria-labelledby="loginModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">LOG IN</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form
+            #loginForm="ngForm"
+            class="w-100"
+            (ngSubmit)="login(loginForm)"
+            autocomplete="off"
+          >
+            <div class="form-floating mb-4">
+              <input
                 name="username"
                 [(ngModel)]="model.username"
                 type="text"
                 class="form-control"
                 id="floatingInput"
                 placeholder="Username"
-                required>
-							<label for="floatingInput">Username</label>
-						</div>
-						<div class="form-floating mb-4">
-							<input
+              />
+              <label for="floatingInput">
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+                Username
+              </label>
+            </div>
+            <div class="form-floating mb-4">
+              <input
                 name="password"
                 [(ngModel)]="model.password"
                 type="password"
                 class="form-control"
                 id="floatingPassword"
                 placeholder="Password"
-                required>
-							<label for="floatingPassword">Password</label>
-						</div>
-						<div class="d-grid gap-2">
-							<button class=" btn btn-primary" type="submit">LOG IN</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Login Modal Ends Here -->
+              />
+              <label for="floatingPassword">
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"
+                  ></path>
+                </svg>
+                Password
+              </label>
+            </div>
+            <div class="d-grid gap-2">
+              <button class=" btn btn-primary" type="submit">
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+                  ></path>
+                </svg>
+                LOG IN
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Login Modal Ends Here -->
 </nav>
