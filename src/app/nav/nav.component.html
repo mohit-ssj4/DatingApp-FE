@@ -87,17 +87,42 @@
       </ul>
       <!-- Nav Links Ends Here -->
 
+      <!-- Login Button Starts Here -->
+      <button
+        *ngIf="!loggedIn"
+        type="button"
+        class="btn loginBtn text-white"
+        data-toggle="modal"
+        data-target="#loginModal"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+          ></path>
+        </svg>
+        Log in
+      </button>
+      <!-- Login Button Ends Here -->
       <!-- Dropdown Starts Here -->
       <div *ngIf="loggedIn" class="dropdown">
         <a
-          class="nav-link dropdown-toggle"
+          class="nav-link dropdown-toggle p-0"
           href="#"
           id="navbarDropdown"
           role="button"
           data-toggle="dropdown"
           aria-expanded="false"
         >
-          Welcome user
+          Welcome <span class="text-dark">{{loggedInUser | titlecase}}</span>
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           <li>
@@ -144,32 +169,6 @@
         </ul>
       </div>
       <!-- Dropdown Ends Here -->
-
-      <!-- Login Button Starts Here -->
-      <button
-        *ngIf="!loggedIn"
-        type="button"
-        class="btn loginBtn text-white"
-        data-toggle="modal"
-        data-target="#loginModal"
-      >
-        <svg
-          class="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
-          ></path>
-        </svg>
-        Log in
-      </button>
-      <!-- Login Button Starts Here -->
     </div>
   </div>
   <!-- Login Modal Starts Here -->
