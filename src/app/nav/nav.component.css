@@ -3,6 +3,24 @@ input {
 }
 
 svg {
-  height: 1.3em;
-  width: 1.3em;
+  height: 1.5em;
+  width: 1.5em;
+  vertical-align: top;
+}
+
+.logo {
+  height: 3em;
+  width: 3em;
+}
+
+.loginBtn {
+  background-color: rgba(79, 70, 229, 1) !important;
+}
+
+.nav-link:hover {
+  color: rgba(79, 70, 229, 1) !important;
+}
+
+.dropdown-menu li a:hover {
+  color: rgba(79, 70, 229, 1) !important;
 }
