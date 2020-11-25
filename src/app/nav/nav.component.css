@@ -49,6 +49,11 @@ a.dropdown-item:active {
   color: rgba(79, 70, 229, 1);
 }
 
+.alert {
+  background-color: rgba(79, 70, 229, 1) !important;
+  color: white;
+}
+
 @media only screen and (max-width: 350px) {
   .logo {
     height: 2em;

@@ -141,14 +141,16 @@
           ></button>
 				</div>
 				<div class="modal-body">
-					<form #loginForm="ngForm" class="w-100" (ngSubmit)="login(loginForm)" autocomplete="off">
+					<!-- Login Form Starts Here -->
+					<form *ngIf="(accountService.currentUser$ | async) === null" #loginForm="ngForm" class="w-100"
+						(ngSubmit)="login(loginForm)" autocomplete="off">
 						<div class="form-floating mb-4">
 							<input
                 name="username"
                 [(ngModel)]="model.username"
                 type="text"
                 class="form-control"
-                id="floatingInput"
+                id="floatingInput username"
                 placeholder="Username"
               />
 							<label for="floatingInput">
@@ -197,7 +199,7 @@
               </label>
 						</div>
 						<div class="d-grid gap-2">
-							<button class=" btn loginBtn text-white" type="submit">
+							<button class=" btn loginBtn text-white" type="submit" id="login">
                 <svg
                   class="w-6 h-6"
                   fill="none"
@@ -216,6 +218,18 @@
               </button>
 						</div>
 					</form>
+					<!-- Login Form Ends Here -->
+
+					<!-- Login Successful Alert Starts Here -->
+					<div *ngIf="accountService.currentUser$ | async" class="alert alert-success" role="alert">
+						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+								d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+						</svg>
+						Woo hoo ! You have logged in successfully
+					</div>
+					<!-- Login Successful Alert Ends Here -->
 				</div>
 			</div>
 		</div>

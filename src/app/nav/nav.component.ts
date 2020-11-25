@@ -20,12 +20,12 @@ export class NavComponent implements OnInit {
     this.accountService.login(this.model).subscribe(
       response => {
         console.log(response);
+        loginForm.reset();
       },
       error => {
         console.log(error);
       }
     );
-    loginForm.reset();
   }
 
   logout() {
