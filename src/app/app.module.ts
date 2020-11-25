@@ -7,10 +7,11 @@ import { AppComponent } from "./app.component";
 import { AccountService } from "./services/account.service";
 import { NavComponent } from "./nav/nav.component";
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, HttpClientModule],
-  declarations: [AppComponent, HelloComponent, NavComponent, HomeComponent],
+  declarations: [AppComponent, HelloComponent, NavComponent, HomeComponent, FooterComponent],
   bootstrap: [AppComponent],
   providers: [AccountService]
 })

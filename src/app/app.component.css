@@ -5,3 +5,8 @@
   justify-items: center;
   width: 100%;
 }
+
+app-footer {
+  position: fixed;
+  bottom: 0;
+}
