@@ -1,5 +1,5 @@
 input {
-  margin-right: 0.5em;
+  border: 2px solid rgba(79, 70, 229, 1);
 }
 
 svg {
@@ -14,20 +14,10 @@ svg {
   margin-right: 0.2em;
 }
 
-.loginBtn {
+.loginBtn,
+.alert {
   background-color: rgba(79, 70, 229, 1) !important;
-}
-
-.dropdown-toggle {
-  color: rgba(79, 70, 229, 1) !important;
-}
-
-.dropdown-menu li a:hover {
-  color: rgba(79, 70, 229, 1) !important;
-}
-
-.welcome:hover {
-  color: rgba(79, 70, 229, 1) !important;
+  color: white;
 }
 
 a.dropdown-item:active {
@@ -41,17 +31,13 @@ a.dropdown-item:active {
   height: 100%;
 }
 
-.nav-link:hover {
+.nav-link svg,
+.modal-header h5,
+.nav-link:hover,
+.dropdown-toggle,
+.dropdown-menu li a:hover,
+.welcome:hover {
   color: rgba(79, 70, 229, 1) !important;
-}
-
-.nav-link svg {
-  color: rgba(79, 70, 229, 1);
-}
-
-.alert {
-  background-color: rgba(79, 70, 229, 1) !important;
-  color: white;
 }
 
 @media only screen and (max-width: 350px) {
