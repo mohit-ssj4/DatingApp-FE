@@ -22,10 +22,6 @@ svg {
   color: rgba(79, 70, 229, 1) !important;
 }
 
-.nav-link:hover {
-  color: rgba(79, 70, 229, 1) !important;
-}
-
 .dropdown-menu li a:hover {
   color: rgba(79, 70, 229, 1) !important;
 }
@@ -43,6 +39,14 @@ a.dropdown-item:active {
   z-index: 100;
   background-color: #f8f9fa;
   height: 100%;
+}
+
+.nav-link:hover {
+  color: rgba(79, 70, 229, 1) !important;
+}
+
+.nav-link svg {
+  color: rgba(79, 70, 229, 1);
 }
 
 @media only screen and (max-width: 350px) {
