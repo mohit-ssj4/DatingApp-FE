@@ -1,0 +1,18 @@
+.registerBtn {
+  background-color: rgba(79, 70, 229, 1) !important;
+}
+
+.registerBtn svg {
+  height: 1.5em;
+  width: 1.5em;
+  vertical-align: top;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); /* for IE 9 */
+  -webkit-transform: translate(-50%, -50%); /* for Safari */
+}

@@ -6,10 +6,11 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from "./app.component";
 import { AccountService } from "./services/account.service";
 import { NavComponent } from "./nav/nav.component";
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, HttpClientModule],
-  declarations: [AppComponent, HelloComponent, NavComponent],
+  declarations: [AppComponent, HelloComponent, NavComponent, HomeComponent],
   bootstrap: [AppComponent],
   providers: [AccountService]
 })

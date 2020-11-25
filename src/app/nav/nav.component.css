@@ -11,10 +11,15 @@ svg {
 .logo {
   height: 3em;
   width: 3em;
+  margin-right: 0.2em;
 }
 
 .loginBtn {
   background-color: rgba(79, 70, 229, 1) !important;
+}
+
+.dropdown-toggle {
+  color: rgba(79, 70, 229, 1) !important;
 }
 
 .nav-link:hover {
@@ -32,4 +37,25 @@ svg {
 a.dropdown-item:active {
   background-color: transparent;
   color: white;
+}
+
+#navbarSupportedContent {
+  z-index: 100;
+  background-color: #f8f9fa;
+  height: 100%;
+}
+
+@media only screen and (max-width: 350px) {
+  .logo {
+    height: 2em;
+    width: 2em;
+  }
+
+  .navbar-brand {
+    font-size: 1em;
+  }
+
+  .navbar-collapse {
+    margin-top: 0.5em;
+  }
 }
