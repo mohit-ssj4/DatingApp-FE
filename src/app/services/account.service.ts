@@ -25,6 +25,10 @@ export class AccountService {
     );
   }
 
+  register(model: any) {
+    return this.http.post(this.baseUrl + "account/register", model);
+  }
+
   setCurrentUser(user: User) {
     this.currentUserSource.next(user);
   }

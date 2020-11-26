@@ -154,7 +154,7 @@
 				<div class="modal-body">
 					<!-- Login Form Starts Here -->
 					<form *ngIf="(accountService.currentUser$ | async) === null" #loginForm="ngForm" class="w-100"
-						(ngSubmit)="login()" autocomplete="off">
+						(ngSubmit)="login(loginForm)" autocomplete="off">
 						<div class="form-floating mb-4">
 							<input
                 name="username"
@@ -210,7 +210,7 @@
               </label>
 						</div>
 						<div class="d-grid gap-2">
-							<button class=" btn loginBtn text-white" type="submit" id="login">
+							<button class=" btn loginBtn btn-lg text-white" type="submit" id="login">
                 <svg
                   class="w-6 h-6"
                   fill="none"

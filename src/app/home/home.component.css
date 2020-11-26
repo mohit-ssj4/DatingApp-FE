@@ -1,5 +1,7 @@
-.registerBtn {
+.registerBtn,
+.alert {
   background-color: var(--primary);
+  color: var(--white);
 }
 
 .registerBtn svg {
@@ -17,6 +19,7 @@
   -webkit-transform: translate(-50%, -50%);
 }
 
-.lead {
+.lead,
+.modal-header h5 {
   color: var(--primary);
 }
