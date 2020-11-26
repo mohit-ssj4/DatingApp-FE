@@ -33,6 +33,7 @@ a.dropdown-item:active {
 
 .navbar-toggler {
   border: none;
+  padding: 0 !important;
 }
 
 .nav-link svg,
