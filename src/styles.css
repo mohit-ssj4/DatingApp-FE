@@ -1,10 +1,15 @@
-/* Add application styles & imports to this file! */
+:root {
+  --primary: rgba(79, 70, 229, 1);
+  --off-white: #f8f9fa;
+  --white: white;
+}
+
 * {
   font-family: Nunito;
 }
 
 body {
-  background-color: #f8f9fa !important;
+  background-color: var(--off-white) !important;
 }
 
 a:hover {

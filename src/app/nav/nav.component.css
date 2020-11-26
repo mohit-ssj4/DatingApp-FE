@@ -1,5 +1,5 @@
 input {
-  border: 2px solid rgba(79, 70, 229, 1);
+  border: 2px solid var(--primary);
 }
 
 svg {
@@ -16,19 +16,23 @@ svg {
 
 .loginBtn,
 .alert {
-  background-color: rgba(79, 70, 229, 1) !important;
-  color: white;
+  background-color: var(--primary);
+  color: var(--white);
 }
 
 a.dropdown-item:active {
   background-color: transparent;
-  color: white;
+  color: var(--white);
 }
 
 #navbarSupportedContent {
   z-index: 100;
-  background-color: #f8f9fa;
+  background-color: var(--off-white);
   height: 100%;
+}
+
+.navbar-toggler {
+  border: none;
 }
 
 .nav-link svg,
@@ -36,8 +40,9 @@ a.dropdown-item:active {
 .nav-link:hover,
 .dropdown-toggle,
 .dropdown-menu li a:hover,
-.welcome:hover {
-  color: rgba(79, 70, 229, 1) !important;
+.welcome:hover,
+.navbar-toggler svg {
+  color: var(--primary) !important;
 }
 
 @media only screen and (max-width: 350px) {
