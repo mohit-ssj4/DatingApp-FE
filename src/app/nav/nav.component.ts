@@ -10,17 +10,14 @@ import { AccountService } from "../services/account.service";
 })
 export class NavComponent implements OnInit {
   model: any = {};
-  loggedInUser: string;
   constructor(public accountService: AccountService) {}
 
   ngOnInit() {}
 
-  login(loginForm) {
-    this.loggedInUser = this.model.username;
+  login() {
     this.accountService.login(this.model).subscribe(
       response => {
         console.log(response);
-        loginForm.reset();
       },
       error => {
         console.log(error);
