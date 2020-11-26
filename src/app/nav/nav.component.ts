@@ -17,6 +17,7 @@ export class NavComponent implements OnInit {
   login(loginForm) {
     this.accountService.login(this.model).subscribe(
       response => {
+        console.log(response);
         loginForm.reset();
       },
       error => {
