@@ -1,3 +1,5 @@
+@import "ngx-toastr/toastr.css";
+
 :root {
   --primary: rgba(79, 70, 229, 1);
   --off-white: #f8f9fa;
@@ -24,4 +26,10 @@ svg {
   height: 1.5em;
   width: 1.5em;
   vertical-align: top;
+}
+
+@media only screen and (max-width: 350px) {
+  .toast-container {
+    left: -10px;
+  }
 }

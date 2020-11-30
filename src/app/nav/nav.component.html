@@ -223,7 +223,7 @@
             *ngIf="(accountService.currentUser$ | async) === null"
             #loginForm="ngForm"
             class="w-100"
-            (ngSubmit)="login(loginForm)"
+            (ngSubmit)="login()"
             autocomplete="off"
           >
             <div class="form-floating mb-4">

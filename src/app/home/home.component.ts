@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { AccountService } from "../services/account.service";
+import { ToastrService } from "ngx-toastr";
 
 @Component({
   selector: "app-home",
@@ -9,7 +10,10 @@ import { AccountService } from "../services/account.service";
 export class HomeComponent implements OnInit {
   model: any = {};
   isSuccessful: boolean;
-  constructor(public accountService: AccountService) {}
+  constructor(
+    public accountService: AccountService,
+    private toastrService: ToastrService
+  ) {}
 
   ngOnInit() {}
 
@@ -21,6 +25,7 @@ export class HomeComponent implements OnInit {
       },
       error => {
         console.log(error);
+        this.toastrService.error(error.error);
       }
     );
   }

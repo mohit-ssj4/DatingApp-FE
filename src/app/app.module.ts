@@ -13,9 +13,21 @@ import { ListsComponent } from "./lists/lists.component";
 import { MemberDetailComponent } from "./members/member-detail/member-detail.component";
 import { MessagesComponent } from "./messages/messages.component";
 import { AppRoutingModule } from "./app-routing/app-routing.module";
+import { ToastrModule } from "ngx-toastr";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    AppRoutingModule,
+    ToastrModule.forRoot({
+      progressBar: true,
+      timeOut: 3000
+    }),
+    BrowserAnimationsModule
+  ],
   declarations: [
     AppComponent,
     HelloComponent,
