@@ -24,7 +24,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     AppRoutingModule,
     ToastrModule.forRoot({
       progressBar: true,
-      timeOut: 3000
+      timeOut: 2500
     }),
     BrowserAnimationsModule
   ],

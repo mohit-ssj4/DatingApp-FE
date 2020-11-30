@@ -37,7 +37,10 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <!-- Nav Links Starts Here -->
-      <ul class="navbar-nav mr-auto mb-2 mb-lg-0 text-right">
+      <ul
+        class="navbar-nav mr-auto mb-2 mb-lg-0 text-right"
+        *ngIf="accountService.currentUser$ | async"
+      >
         <li class="nav-item">
           <a
             class="nav-link text-dark"
@@ -114,7 +117,8 @@
       <button
         *ngIf="(accountService.currentUser$ | async) === null"
         type="button"
-        class="btn loginBtn text-white float-right"
+        id="modalTrigger"
+        class="btn loginBtn text-white"
         data-toggle="modal"
         data-target="#loginModal"
       >

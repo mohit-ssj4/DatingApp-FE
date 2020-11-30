@@ -40,6 +40,10 @@ a.dropdown-item:active {
   color: var(--primary) !important;
 }
 
+#modalTrigger {
+  margin-left: 85%;
+}
+
 @media only screen and (max-width: 350px) {
   .logo {
     height: 2em;
