@@ -1,100 +1,160 @@
 <div class="container">
-	<div class="text-center">
-		<h1>Find your match</h1>
-		<p class="lead">Come on in to view your matches... all you need to do is register !</p>
-	</div>
-	<div class="text-center p-4">
-		<button class=" btn btn-lg registerBtn text-white" type="button" data-toggle="modal" data-target="#registerModal">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"></path></svg>
+  <div class="text-center">
+    <h1>Find your match</h1>
+    <p class="lead">
+      Come on in to view your matches... all you need to do is register !
+    </p>
+  </div>
+  <div class="text-center p-4">
+    <button
+      class=" btn btn-lg registerBtn text-white"
+      type="button"
+      data-toggle="modal"
+      data-target="#registerModal"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"
+        ></path>
+      </svg>
       Register
     </button>
-	</div>
+  </div>
 </div>
-<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="registerModalLabel">REGISTER</h5>
-				<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-			</div>
-			<div class="modal-body">
-				<!-- Register Form Starts Here -->
-				<form *ngIf="!isSuccessful" #registerForm="ngForm" class="w-100" (ngSubmit)="register()"
-					autocomplete="off">
-					<div class="form-floating mb-4">
-						<input
-                name="username"
-                [(ngModel)]="model.username"
-                type="text"
-                class="form-control"
-                id="floatingInput"
-                placeholder="Username"
-              />
-						<label for="floatingInput">
-                <svg
-                  class="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  ></path>
-                </svg>
-                Username
-              </label>
-					</div>
-					<div class="form-floating mb-4">
-						<input
-                name="password"
-                [(ngModel)]="model.password"
-                type="password"
-                class="form-control"
-                id="floatingPassword"
-                placeholder="Password"
-              />
-						<label for="floatingPassword">
-                <svg
-                  class="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"
-                  ></path>
-                </svg>
-                Password
-              </label>
-					</div>
-					<div class="d-grid gap-2">
-						<button class=" btn registerBtn btn-lg text-white" type="submit" id="register">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"></path></svg>
-                REGISTER
-              </button>
-					</div>
-				</form>
-				<!-- Register Form Ends Here -->
+<div
+  class="modal fade"
+  id="registerModal"
+  tabindex="-1"
+  aria-labelledby="registerModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="registerModalLabel">REGISTER</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <!-- Register Form Starts Here -->
+        <form
+          *ngIf="!isSuccessful"
+          #registerForm="ngForm"
+          class="w-100"
+          (ngSubmit)="register()"
+          autocomplete="off"
+        >
+          <div class="form-floating mb-4">
+            <input
+              name="username"
+              [(ngModel)]="model.username"
+              type="text"
+              class="form-control"
+              id="floatingInput"
+              placeholder="Username"
+            />
+            <label for="floatingInput">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+              Username
+            </label>
+          </div>
+          <div class="form-floating mb-4">
+            <input
+              name="password"
+              [(ngModel)]="model.password"
+              type="password"
+              class="form-control"
+              id="floatingPassword"
+              placeholder="Password"
+            />
+            <label for="floatingPassword">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"
+                ></path>
+              </svg>
+              Password
+            </label>
+          </div>
+          <div class="d-grid gap-2">
+            <button
+              class=" btn registerBtn btn-lg text-white"
+              type="submit"
+              id="register"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"
+                ></path>
+              </svg>
+              REGISTER
+            </button>
+          </div>
+        </form>
+        <!-- Register Form Ends Here -->
 
-				<!-- Register Successful Alert Starts Here -->
-				<div *ngIf="isSuccessful" class="alert alert-success" role="alert">
-					<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-						<path fill-rule="evenodd"
-							d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-							clip-rule="evenodd"></path>
-					</svg>
-					Woo hoo ! You have been registered successfully
-				</div>
-				<!-- Register Successful Alert Ends Here -->
-			</div>
-		</div>
-	</div>
+        <!-- Register Successful Alert Starts Here -->
+        <div *ngIf="isSuccessful" class="alert alert-success" role="alert">
+          <svg
+            class="w-6 h-6"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          Woo hoo ! You have been registered and logged in successfully
+        </div>
+        <!-- Register Successful Alert Ends Here -->
+      </div>
+    </div>
+  </div>
 </div>
