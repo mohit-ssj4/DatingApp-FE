@@ -116,8 +116,7 @@
       <button
         *ngIf="(accountService.currentUser$ | async) === null"
         type="button"
-        id="modalTrigger"
-        class="btn loginBtn text-white"
+        class="btn loginBtn text-white float-right"
         data-toggle="modal"
         data-target="#loginModal"
       >
@@ -141,7 +140,7 @@
 
       <!-- Dropdown Starts Here -->
       <div
-        *ngIf="accountService.currentUser$ | async"
+        *ngIf="(accountService.currentUser$ | async) as user"
         class="dropdown float-right"
       >
         <a
@@ -152,7 +151,9 @@
           data-toggle="dropdown"
           aria-expanded="false"
         >
-          <span class="text-dark welcome">Welcome </span>
+          <span class="text-dark welcome"
+            >Welcome {{user.username | titlecase}}</span
+          >
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           <li>
