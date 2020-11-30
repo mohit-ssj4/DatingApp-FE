@@ -30,13 +30,13 @@ a.dropdown-item:active {
   padding: 0 !important;
 }
 
-.nav-link svg,
 .modal-header h5,
 .nav-link:hover,
 .dropdown-toggle,
 .dropdown-menu li a:hover,
 .welcome:hover,
-.navbar-toggler svg {
+.navbar-toggler svg,
+.active {
   color: var(--primary) !important;
 }
 
