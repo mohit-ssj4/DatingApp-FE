@@ -12,9 +12,9 @@ import { MemberListComponent } from "./members/member-list/member-list.component
 import { ListsComponent } from "./lists/lists.component";
 import { MemberDetailComponent } from "./members/member-detail/member-detail.component";
 import { AppRoutingModule } from "./app-routing/app-routing.module";
-import { ToastrModule } from "ngx-toastr";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MessagesComponent } from "./messages/messages.component";
+import { SharedModule } from "./modules/shared.module";
 
 @NgModule({
   imports: [
@@ -22,11 +22,8 @@ import { MessagesComponent } from "./messages/messages.component";
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    ToastrModule.forRoot({
-      progressBar: true,
-      timeOut: 2500
-    }),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SharedModule
   ],
   declarations: [
     AppComponent,
