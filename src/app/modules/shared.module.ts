@@ -7,7 +7,8 @@ import { ToastrModule } from "ngx-toastr";
     CommonModule,
     ToastrModule.forRoot({
       progressBar: true,
-      timeOut: 2000
+      timeOut: 2000,
+      positionClass: "toast-bottom-right"
     })
   ],
   exports: [ToastrModule],

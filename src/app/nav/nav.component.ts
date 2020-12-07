@@ -19,15 +19,9 @@ export class NavComponent implements OnInit {
   ngOnInit() {}
 
   login() {
-    this.accountService.login(this.model).subscribe(
-      response => {
-        this.router.navigateByUrl("/members");
-      },
-      error => {
-        console.log(error);
-        this.toastrService.error(error.error);
-      }
-    );
+    this.accountService.login(this.model).subscribe(response => {
+      this.router.navigateByUrl("/members");
+    });
   }
 
   logout() {

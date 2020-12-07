@@ -17,6 +17,7 @@ import { MessagesComponent } from "./messages/messages.component";
 import { SharedModule } from "./modules/shared.module";
 import { TestErrorsComponent } from "./errors/test-errors/test-errors.component";
 import { ErrorInterceptor } from "./interceptors/error.interceptor";
+import { NotFoundComponent } from "./errors/not-found/not-found.component";
 
 @NgModule({
   imports: [
@@ -37,7 +38,8 @@ import { ErrorInterceptor } from "./interceptors/error.interceptor";
     ListsComponent,
     MemberDetailComponent,
     MessagesComponent,
-    TestErrorsComponent
+    TestErrorsComponent,
+    NotFoundComponent
   ],
   bootstrap: [AppComponent],
   providers: [
