@@ -1,0 +1,5 @@
+.btn {
+  background-color: var(--primary);
+  color: var(--white);
+  margin: 0.5em;
+}

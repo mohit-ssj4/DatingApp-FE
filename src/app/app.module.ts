@@ -2,7 +2,7 @@ import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
 import { HelloComponent } from "./hello.component";
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { AppComponent } from "./app.component";
 import { AccountService } from "./services/account.service";
 import { NavComponent } from "./nav/nav.component";
@@ -15,6 +15,8 @@ import { AppRoutingModule } from "./app-routing/app-routing.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MessagesComponent } from "./messages/messages.component";
 import { SharedModule } from "./modules/shared.module";
+import { TestErrorsComponent } from "./errors/test-errors/test-errors.component";
+import { ErrorInterceptor } from "./interceptors/error.interceptor";
 
 @NgModule({
   imports: [
@@ -34,9 +36,13 @@ import { SharedModule } from "./modules/shared.module";
     MemberListComponent,
     ListsComponent,
     MemberDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    TestErrorsComponent
   ],
   bootstrap: [AppComponent],
-  providers: [AccountService]
+  providers: [
+    AccountService,
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
+  ]
 })
 export class AppModule {}
