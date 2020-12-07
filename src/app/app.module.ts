@@ -11,10 +11,10 @@ import { FooterComponent } from "./footer/footer.component";
 import { MemberListComponent } from "./members/member-list/member-list.component";
 import { ListsComponent } from "./lists/lists.component";
 import { MemberDetailComponent } from "./members/member-detail/member-detail.component";
-import { MessagesComponent } from "./messages/messages.component";
 import { AppRoutingModule } from "./app-routing/app-routing.module";
 import { ToastrModule } from "ngx-toastr";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MessagesComponent } from "./messages/messages.component";
 
 @NgModule({
   imports: [
